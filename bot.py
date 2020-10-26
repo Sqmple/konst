@@ -609,7 +609,6 @@ async def keyboard_all(call: CallbackQuery):
         await bot.send_message(call.message.chat.id, "2-я страница" , reply_markup=kb.wtfg)
         await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id)
-        await bot.delete_message(call.message.chat.id, call.message.message_id - 1)
     elif call.data == 'main_menu_2':
         await bot.send_message(call.message.chat.id, "Вы в главном меню", reply_markup=kb.button)
         await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)

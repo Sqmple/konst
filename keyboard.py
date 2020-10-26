@@ -183,7 +183,3 @@ word_2 = types.InlineKeyboardButton("2-я страница", callback_data='2_se
 word = types.InlineKeyboardMarkup().add(word_1, word_2)
 
 # кнопка для перехода на 2 страницу
-wff = types.InlineKeyboardButton("Главное меню", callback_data='main_menu_2')
-wtf = types.InlineKeyboardButton("Назад на 1 страницу", callback_data='return')
-wfg = types.InlineKeyboardButton("3-я страница", callback_data='up')
-gf = types.InlineKeyboardMarkup().add(wff,wtf,wfg)
