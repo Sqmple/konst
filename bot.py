@@ -606,15 +606,15 @@ async def keyboard_all(call: CallbackQuery):
     elif call.data == '2_search':
         lgbr = open('photo/Английский/Словарь/2.jpg', 'rb')
         await bot.send_photo(call.message.chat.id, lgbr)
-        await bot.send_message(call.message.chat.id, "2-я страница" , reply_markup=kb.wtfg)
+        await bot.send_message(call.message.chat.id, "2-я страница" , reply_markup=kb.wor)
         await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id)
-    elif call.data == 'main_menu_2':
+    elif call.data == 'main_m':
         await bot.send_message(call.message.chat.id, "Вы в главном меню", reply_markup=kb.button)
         await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id - 1)
-    elif call.data == 'return':
+    elif call.data == 'kgw':
         word = open('photo/Английский/Словарь/1.jpg', 'rb')
         await bot.send_photo(call.message.chat.id, word)
         await bot.send_message(call.message.chat.id, "Вы вернулись обратно", reply_markup=kb.word)
