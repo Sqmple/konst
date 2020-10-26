@@ -127,7 +127,7 @@ geo = types.InlineKeyboardMarkup().add(geo_1, geo_2)
 geo_3 = types.InlineKeyboardButton("Главное меню", callback_data='main_2')
 geo_4 = types.InlineKeyboardButton("Назад на 1 страницу", callback_data='laf')
 geo_5 = types.InlineKeyboardButton("3-я страница", callback_data='photo_2')
-geo_1 = types.InlineKeyboardMarkup().add(geo_3, geo_4,geo_5)
+geo_1 = types.InlineKeyboardMarkup().add(geo_3, geo_4, geo_5)
 # кнопка для перехода на 3 страницу
 geo_6 = types.InlineKeyboardButton("Главное меню", callback_data='main_3')
 geo_7 = types.InlineKeyboardButton("Назад на 2 страницу", callback_data='laf_2')
@@ -180,7 +180,7 @@ eng_main = types.InlineKeyboardMarkup().add(english_1, english_2)
 # словарь
 word_1 = types.InlineKeyboardButton("Главное меню", callback_data='main_menu')
 word_2 = types.InlineKeyboardButton("2-я страница", callback_data='2_search')
-word = types.InlineKeyboardMarkup().add(word_1, word_2);
+word = types.InlineKeyboardMarkup().add(word_1, word_2)
 
 # кнопка для перехода на 2 страницу
 wff = types.InlineKeyboardButton("Главное меню", callback_data='main_menu_2')
