@@ -606,7 +606,7 @@ async def keyboard_all(call: CallbackQuery):
     elif call.data == '2_search':
         lgbr = open('photo/Английский/Словарь/2.jpg', 'rb')
         await bot.send_photo(call.message.chat.id, lgbr)
-        await bot.send_message(call.message.chat.id, "2-я страница",reply_markup=kb.gh)
+        await bot.send_message(call.message.chat.id, "2-я страница" , reply_markup=kb.wtfg)
         await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id - 1)
