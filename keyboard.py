@@ -179,6 +179,11 @@ eng_main = types.InlineKeyboardMarkup().add(english_1, english_2)
 
 # словарь
 word_1 = types.InlineKeyboardButton("Главное меню", callback_data='main_menu')
-word_2 = types.InlineKeyboardButton("2-я страница", callback_data='2 search')
+word_2 = types.InlineKeyboardButton("2-я страница", callback_data='2_search')
 word = types.InlineKeyboardMarkup().add(word_1, word_2);
 
+# кнопка для перехода на 2 страницу
+wff = types.InlineKeyboardButton("Главное меню", callback_data='main_menu_2')
+wtf = types.InlineKeyboardButton("Назад на 1 страницу", callback_data='return')
+wfg = types.InlineKeyboardButton("3-я страница", callback_data='up')
+gh = types.ReplyKeyboardMarkup().add(wff, wtf, wfg)
