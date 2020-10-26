@@ -177,5 +177,8 @@ english_1 = types.InlineKeyboardButton("Словарь", callback_data='words')
 english_2 = types.InlineKeyboardButton("Конспект", callback_data='konsp_english')
 eng_main = types.InlineKeyboardMarkup().add(english_1, english_2)
 
-
+# словарь
+word_1 = types.InlineKeyboardButton("Главное меню", callback_data='main_menu')
+word_2 = types.InlineKeyboardButton("2-я страница", callback_data='2 search')
+word = types.InlineKeyboardMarkup().add(word_1, word_2);
 

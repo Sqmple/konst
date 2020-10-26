@@ -592,7 +592,12 @@ async def keyboard_all(call: CallbackQuery):
         await bot.send_message(call.message.chat.id, "Выберите,что вам нужно", reply_markup=kb.eng_main)
         await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id)
-
+    elif call.data == 'words':
+        word = open('photo/Английский/Словарь/1.jpg', 'rb')
+        await bot.send_photo(call.message.chat.id, word)
+        await bot.send_message(call.message.chat.id, "1-я страница", reply_markup=kb.word)
+        await bot.delete_message(call.message.chat.id, call.message.message_id)
+        await bot.delete_message(call.message.chat.id, call.message.message_id - 1)
 
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
