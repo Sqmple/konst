@@ -623,5 +623,24 @@ async def keyboard_all(call: CallbackQuery):
         await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id)
         await bot.delete_message(call.message.chat.id, call.message.message_id - 1)
+    elif call.data == 'phot':
+        word = open('photo/Английский/Словарь/3.jpg', 'rb')
+        await bot.send_photo(call.message.chat.id, word)
+        await bot.send_message(call.message.chat.id, "3-я страница", reply_markup=kb.lor)
+        await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
+        await bot.delete_message(call.message.chat.id, call.message.message_id)
+        await bot.delete_message(call.message.chat.id, call.message.message_id - 1)
+    elif call.data == 'lrgk':
+        await bot.send_message(call.message.chat.id, "Вы в главном меню", reply_markup=kb.button)
+        await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
+        await bot.delete_message(call.message.chat.id, call.message.message_id)
+        await bot.delete_message(call.message.chat.id, call.message.message_id - 1)
+    elif call.data == 'mvg':
+        lgbr = open('photo/Английский/Словарь/2.jpg', 'rb')
+        await bot.send_photo(call.message.chat.id, lgbr)
+        await bot.send_message(call.message.chat.id, "Вы вернулись обратно", reply_markup=kb.wor)
+        await bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
+        await bot.delete_message(call.message.chat.id, call.message.message_id)
+        await bot.delete_message(call.message.chat.id, call.message.message_id - 1)
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
